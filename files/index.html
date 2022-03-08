@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura-vader.css" type="text/css">
+    <title>{{ TITLE }}</title>
+  </head>
+
+  <body>
+    <h1>{{ TITLE }}</h1>
+    <p>To install a plugin, click on the "install" button.</p>
+    <hr />
+
+    {{ ARTICLES }}
+    
+    <hr />
+    <p>Generated using <a href="https://github.com/enmity-mod/enmity-store">enmity-store</a>.</p>
+
+    <script>
+      const buttons = document.querySelectorAll("button");
+
+      buttons.forEach(button => {
+        button.onclick = () => {
+          location.href = `com.hammerandchisel.discord://enmity?id=-1&command=install-plugin&params=${location.origin}/plugins/${button.dataset.name}.js`
+        };
+      });      
+    </script>
+  </body>
+</html>
