@@ -3,7 +3,7 @@
 Script used to generate a website front-end for your plugins.  
 Usage:
 
-```shell
+```none
 go run cmds/store/main.go
   -dir string
         Your repository's folder.
