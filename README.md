@@ -1,25 +1,26 @@
-# Enmity-store
+<div align='center'>
+   <img src='https://repo.enmity.app/banner.png' />
+</div>
 
-Script used to generate a website front-end for your plugins.  
-Usage:
+---
 
-```none
-go run cmds/store/main.go
-  -dir string
-        Your repository's folder.
-        
-  -name string
-        Your repo's name. (default "Your plugin repo")
-```
+<div align='center'>
+   <h3>Enmity Store</h3>
 
-The script will generate an index.html and info.json file according to the content of the `plugins/` folder found in your repository's folder.  
-The layout of your store should look like this:
+   Script used to generate a repo website for your plugins.<br />
 
-```none
-  repo:
-    plugins:
-      TestPlugin.js
-      TestPlugin.json
-    index.html
-    info.json
-```
+   Usage:
+   ```shell
+    go run cmds/store/main.go -name <name> -dir <repo>
+   ```
+
+   Your repo folder should have a subfolder named `plugins` with your plugins js and json in it.<br />
+   The generated store is a static webpage that can be hosted on your own server or through github pages.<br />
+</div>
+
+---
+
+<div align='center' style='margin-top: 15px;'>
+   <a href='https://discord.gg/rMdzhWUaGT'><img align='center' alt='Discord' src='https://img.shields.io/discord/950850315601711176?color=36309d&label=DISCORD&logo=discord&logoColor=white&style=for-the-badge'></a>
+   <a href='https://twitter.com/EnmityApp'><img align='center' alt='Twitter' src='https://img.shields.io/twitter/follow/EnmityApp?color=36309d&label=TWITTER&logo=TWITTER&logoColor=white&style=for-the-badge'></a>
+</div>
